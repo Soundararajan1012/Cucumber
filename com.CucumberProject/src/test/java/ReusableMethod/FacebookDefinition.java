@@ -11,9 +11,11 @@ public class FacebookDefinition extends ReusableFacebook {
 	public void facebook_url() {
 	    getdriver();
 	    loadurl("https:www.facebook.com/");
+	    
 	}
 	@Given("username and password")
 	public void username_and_password() {
+		driver.manage().window.maximize();
 	    WebElement username=driver.findElement(By.id("email"));
 	    sendInput(username, "chinna321@gmail.com");
 	    WebElement password=driver.findElement(By.id("pass"));
